@@ -1,0 +1,16 @@
+<div class="upload-section">
+  <div class="upload-label">Upload Election Result:</div>
+  <div class="upload-container">
+      <ngx-file-drop 
+          class="file-drop-zone" 
+          dropZoneLabel="Drop files here" 
+          (onFileDrop)="dropped($event)" 
+          (onFileOver)="fileOver($event)" 
+          (onFileLeave)="fileLeave($event)">
+          
+          <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+              <button type="button" class="upload-button" (click)="openFileSelector()">Browse Files</button>
+          </ng-template>
+      </ngx-file-drop>
+  </div>
+</div>

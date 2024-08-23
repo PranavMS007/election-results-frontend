@@ -1,0 +1,87 @@
+/* Container for the label and file upload section */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Styling for the label */
+.upload-label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #003366; /* Midnight Blue */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Container for the entire file upload section */
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+    background-color: #F8F4E3; /* Light Ivory Background */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+}
+
+/* Styling for the file drop zone */
+.file-drop-zone {
+    border: 2px solid #003366; /* Midnight Blue border */
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    color: #4A4A4A; /* Slate Gray text */
+    background: linear-gradient(145deg, #F8F4E3, #E6E2D4); /* Light Ivory gradient */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Change background and border color on file hover */
+.file-drop-zone:hover {
+    background-color: #FF6F61; /* Coral background on hover */
+    border-color: #FF6F61; /* Coral border on hover */
+    color: #FFFFFF; /* White text on hover */
+}
+
+/* Styling for the Browse Files button */
+.upload-button {
+    background-color: #003366; /* Midnight Blue background */
+    color: #FFFFFF; /* White text */
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the button */
+.upload-button:hover {
+    background-color: #002244; /* Darker Midnight Blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .upload-container {
+        padding: 20px;
+    }
+
+    .file-drop-zone {
+        padding: 30px;
+    }
+
+    .upload-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .upload-label {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 10px;
+}
+
+.header a.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FF6F61;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header a.logo:hover {
+    color: #F8F4E3;
+}
+
+.header-right a {
+    font-size: 18px;
+    color: #FFFFFF; 
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

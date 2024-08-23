@@ -1,0 +1,32 @@
+<div *ngIf="electionResultStateService.electionResult$ | async as electionResult" class="wrapper">
+  <ng-container *ngFor="let item of electionResult | keyvalue">
+    <mat-card class="example-card">
+      <mat-card-header class="name-section">
+        <div class="title-container">
+          <mat-card-title class="constituency-short-name">
+            <span>{{gePartyShortCode(item.key)}}</span>
+          </mat-card-title>
+          <mat-card-title class="card-container-right">
+            <span>{{ item.key }}</span>
+          </mat-card-title>
+        </div>
+      </mat-card-header>
+
+      <mat-card-content class="card-content">
+        <table>
+          <tbody>
+            <tr>
+              <td class="static-text">Votes:</td>
+              <td class="total-vote-count">{{getTotalVotes(item.value)}}</td>
+              <td class="static-text">MPs:</td>
+              <td class="total-mp-count">{{getTotalMps(item.value)}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
+<ng-container *ngIf="loaderserviceService.loader$ | async">
+  <mat-progress-bar mode="indeterminate" class="custom-loader"></mat-progress-bar>
+</ng-container>

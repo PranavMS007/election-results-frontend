@@ -1,0 +1,130 @@
+:host {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //background-color: #F8F4E3; /* Light Ivory Background */
+}
+
+/* Wrapper for Flexbox Layout */
+.wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to next row */
+    justify-content: space-around; /* Space between the cards */
+}
+
+/* Card Styles */
+.example-card {
+    flex: 0 0 calc(50% - 20px); /* 50% width minus some margin */
+    margin: 10px;
+    background: #FFFFFF; /* Pure White Background for a clean look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft Shadow */
+    border-radius: 15px; /* Rounded Corners */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.example-card:hover {
+    transform: translateY(-5px); /* Lift Card on Hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper Shadow on Hover */
+}
+
+/* Header Styles */
+.name-section {
+    background-color: #003366; /* Midnight Blue Header */
+    color: #FFFFFF; /* White Text for Contrast */
+    border-radius: 15px 15px 0 0; /* Rounded Top Corners */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title-container {
+    display: flex;
+    justify-content: space-between; /* Distributes space between the two titles */
+    width: 100%;
+}
+.constituency-short-name {
+    box-sizing: border-box;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    background-color: #FF6F61; /* Coral Circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.constituency-short-name span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns the content to the left */
+    font-size: 18px;
+    padding-left: 10px; /* Optional padding to adjust spacing */
+}
+
+.card-container-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Aligns the content to the right */
+    font-size: 20px;
+    padding-right: 10px; /* Optional padding to adjust spacing */
+    color: #C0C0C0; /* Silver Text */
+}
+
+/* Table Styles */
+.card-content {
+    padding: 15px;
+}
+
+table {
+    width: 100%;
+    text-align: right;
+}
+
+td {
+    padding: 10px 5px;
+    font-size: 16px;
+}
+
+.static-text {
+    font-weight: bold;
+    color: #4A4A4A; /* Slate Gray */
+}
+
+.total-vote-count {
+    color: #28A745; /* Green for Votes */
+    font-weight: bold;
+}
+
+.total-mp-count {
+    color: #007BFF; /* Blue for MPs */
+    font-weight: bold;
+}
+
+/* Custom Loader */
+.custom-loader {
+    background-color: #FF6F61; /* Coral Loader */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .example-card {
+        flex: 0 0 100%; /* Full width on small screens */
+        margin: 10px 0;
+    }
+
+    .card-container-right {
+        font-size: 18px;
+    }
+
+    .static-text {
+        font-size: 14px;
+    }
+
+    .total-vote-count, .total-mp-count {
+        font-size: 16px;
+    }
+}

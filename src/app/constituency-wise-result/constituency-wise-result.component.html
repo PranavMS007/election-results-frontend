@@ -1,0 +1,26 @@
+<div *ngIf="electionResultStateService.constituencyWiseResult$ | async as result">
+  
+  <div class="wrapper">
+    <ng-container *ngFor="let item of paginatedResult">
+      <mat-card class="example-card" appearance="outlined">
+        <div class="child">
+          <mat-card-title>{{ item.constituency_name | uppercase }}</mat-card-title>
+          <mat-card-subtitle>Winner: 
+            <span class="winning-party-name">{{ item.winning_party }}</span>
+          </mat-card-subtitle>
+          <mat-card-subtitle>Vote %: 
+            <span class="votes">{{ getVotePercentrage(item.results, item.winning_party) }}%</span>
+          </mat-card-subtitle>
+        </div>
+        <div class="child">
+          <button mat-flat-button color="primary" class="btn-view-more"
+           (click)="showIndividualConstituency(item.results, item.winning_party, item.constituency_name)">
+            View more details
+          </button>
+        </div>
+      </mat-card>
+    </ng-container>
+  </div>
+  <mat-paginator [length]="result.length" [pageSize]="pageSize" (page)="onPageChange($event)" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+</div>
