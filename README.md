@@ -83,13 +83,13 @@ To run the application using Docker:
 - **Dashboard:** View election results, including party-wise vote distribution and the winning party for each constituency.
 ## UI screenshots
 1. Dashboard
-![Dashboard]
+![Dashboard](https://github.com/PranavMS007/election-results-frontend/blob/main/screenshots/dashboard.png?raw=true)
 
 2. Consituency-result
-![consituency-result]
+![consituency-result](https://github.com/PranavMS007/election-results-frontend/blob/main/screenshots/consituency-result.png?raw=true)
 
 3. CSV upload
-![CSV upload]
+![CSV upload](https://github.com/PranavMS007/election-results-frontend/blob/main/screenshots/upload-csv.png?raw=true)
 
 ## Known Issues and Limitations
 
